@@ -3,10 +3,8 @@ const http=require("http")
 const fs=require('fs')
 
 const PORT=process.env.PORT;
-const home=fs.readFileSync('./Home.html');
-const Contact=fs.readFileSync('./Contact.html');
-const About=fs.readFileSync('./About.html');
-const PageNotFound=fs.readFileSync('./About.html');
+const home=fs.readFileSync('./index.html','utf-8')
+
 
 
 const server=http.createServer((req,res)=>{
@@ -14,13 +12,13 @@ const server=http.createServer((req,res)=>{
         return res.end(home) 
     }
     if(req.url==="/contact"){
-        return res.end(Contact) 
+        return res.end('<h1>Contact PAGE</h1>') 
     }
     if(req.url==="/about"){
-        return res.end(About) 
+        return res.end('<h1>About PAGE</h1>') 
     }
     else{
-        return res.end(PageNotFound) 
+        return res.end('<h1>404 PAGE NOT FOUND</h1>') 
     }
 })
 
