@@ -12,13 +12,13 @@ const server=http.createServer((req,res)=>{
         return res.end(home) 
     }
     if(req.url==="/contact"){
-        return res.end('<h1>Contact PAGE</h1>') 
+        return res.end("<h1>Contact PAGE</h1>") 
     }
     if(req.url==="/about"){
-        return res.end('<h1>About PAGE</h1>') 
+        return res.end("<h1>About PAGE</h1>") 
     }
     else{
-        return res.end('<h1>404 PAGE NOT FOUND</h1>') 
+        return res.end("<h1>404 PAGE NOT FOUND</h1>") 
     }
 })
 
