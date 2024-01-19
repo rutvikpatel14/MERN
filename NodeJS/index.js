@@ -3,7 +3,7 @@ const http=require("http")
 const fs=require('fs')
 
 const PORT=process.env.PORT;
-const home=fs.readFileSync('./index.html','utf-8')
+const home=fs.readFileSync('./index.html')
 
 
 
