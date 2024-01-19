@@ -6,6 +6,7 @@ const PORT=process.env.PORT;
 const home=fs.readFileSync('./Home.html');
 const Contact=fs.readFileSync('./Contact.html');
 const About=fs.readFileSync('./About.html');
+const PageNotFound=fs.readFileSync('./About.html');
 
 
 const server=http.createServer((req,res)=>{
@@ -19,7 +20,7 @@ const server=http.createServer((req,res)=>{
         return res.end(About) 
     }
     else{
-        return res.end("<h1>404 PAGE NOT FOUND</h1>") 
+        return res.end(PageNotFound) 
     }
 })
 
