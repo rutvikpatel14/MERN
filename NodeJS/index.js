@@ -8,7 +8,7 @@ const home=fs.readFileSync('./index.html','utf-8')
 
 
 
-const server=http.createServer((req,res,next)=>{
+const server=http.createServer((req,res)=>{
     if(req.url==="/"){
         res.end(home) 
     }
