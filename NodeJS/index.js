@@ -10,16 +10,16 @@ const home=fs.readFileSync('./index.html','utf-8')
 
 const server=http.createServer((req,res)=>{
     if(req.url==="/"){
-        res.end(home) 
+        return res.end(home) 
     }
     if(req.url==="/contact"){
-        res.end('<h1>Contact PAGE') 
+        return res.end('<h1>Contact PAGE') 
     }
     if(req.url==="/about"){
-        res.end('<h1>About PAGE') 
+        return res.end('<h1>About PAGE') 
     }
     else{
-        res.end('<h1>404 PAGE NOT FOUND</h1>') 
+        return res.end('<h1>404 PAGE NOT FOUND</h1>') 
     }
 })
 
